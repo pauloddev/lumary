@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumary Moda Feminina</title>
+<meta name="description" content="Lumary Moda Feminina: duas lojas em João Pessoa (Mangabeira e Cristo) e atendimento online pelo WhatsApp com envio para todo o Brasil.">
+<meta name="theme-color" content="#AC3CC0">
+<meta property="og:title" content="Lumary Moda Feminina">
+<meta property="og:description" content="Sua personalidade merece ser vestida.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://lumary.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Lumary Moda Feminina">
+<meta property="og:url" content="https://lumary.vercel.app/">
+<meta property="og:image" content="https://lumary.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Lumary Moda Feminina">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumary Moda Feminina">
+<meta name="twitter:description" content="Sua personalidade merece ser vestida.">
+<meta name="twitter:image" content="https://lumary.vercel.app/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roxo:#AC3CC0; --roxo-fundo:#9A32AD; --roxo-escuro:#5A1A68; --roxo-escuro-2:#47124F; --branco:#FFFFFF; --lilas:#F7F1F8; --ameixa:#3D1047;
+  --lilas-borda:#E7D6EA; --texto:#3D1047; --texto-suave:#6B4A74;
+  --serif:"Bodoni Moda", "Didot", Georgia, serif; --sans:"Manrope", system-ui, sans-serif;
+  --gutter:clamp(16px,4vw,56px); --max:1240px; --ease:cubic-bezier(.22,.61,.36,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--roxo:#AC3CC0;--branco:#FFFFFF;--lilas:#F7F1F8;--ameixa:#3D1047;--texto:#3D1047}}
+:root[data-theme="dark"]{--roxo:#AC3CC0;--branco:#FFFFFF;--lilas:#F7F1F8;--ameixa:#3D1047;--texto:#3D1047}
+
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--branco);color:var(--texto);font:400 16px/1.65 var(--sans);overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.hero-cap,.count,.ed-sign span,.elas-txt p{font-optical-sizing:none;font-variation-settings:"opsz" 30}
+h1,h2,h3{font-family:var(--serif);font-weight:555;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+section{position:relative}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec-roxo{background:var(--roxo);color:var(--branco)}
+.sec-lilas{background:var(--lilas)}
+.sec-ameixa{background:var(--roxo-escuro);color:var(--branco)}
+.h2{font-size:clamp(2rem,4.4vw,3.5rem)}
+.lead{font-size:clamp(1rem,1.3vw,1.125rem);color:var(--texto-suave);max-width:46ch}
+.sec-roxo .lead,.sec-ameixa .lead{color:rgba(255,255,255,.86)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head .lead{margin-top:16px}
+
+/* ---------- Botões: inversão de cores ---------- */
+.btn{--bg:var(--roxo);--fg:var(--branco);--bd:var(--roxo);
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;
+  font:700 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+  color:var(--fg);background:var(--bg);border:1.5px solid var(--bd);border-radius:999px;cursor:pointer;
+  transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .12s var(--ease);
+  touch-action:manipulation;user-select:none;-webkit-user-select:none;text-align:center}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.btn-roxo{--bg:var(--roxo);--fg:var(--branco);--bd:var(--roxo)}
+.btn-linha{--bg:transparent;--fg:var(--roxo);--bd:var(--roxo)}
+.btn-branco{--bg:var(--branco);--fg:var(--roxo);--bd:var(--branco)}
+.btn-linha-branca{--bg:transparent;--fg:var(--branco);--bd:var(--branco)}
+@media (hover:hover) and (pointer:fine){
+  .btn-roxo:hover{--bg:var(--branco);--fg:var(--roxo)}
+  .btn-linha:hover{--bg:var(--roxo);--fg:var(--branco)}
+  .btn-branco:hover{--bg:transparent;--fg:var(--branco)}
+  .btn-linha-branca:hover{--bg:var(--branco);--fg:var(--roxo)}
+}
+.btn-roxo:active{--bg:var(--branco);--fg:var(--roxo)}
+.btn-linha:active{--bg:var(--roxo);--fg:var(--branco)}
+.btn-branco:active{--bg:transparent;--fg:var(--branco)}
+.btn-linha-branca:active{--bg:var(--branco);--fg:var(--roxo)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- Header ---------- */
+.top{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top);transition:background-color .4s var(--ease),box-shadow .4s var(--ease)}
+.top-in{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.top .logo{height:34px;width:auto}
+.top .logo-r{display:none}
+.top.solid{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--lilas-borda)}
+.top.solid .logo-b{display:none}.top.solid .logo-r{display:block}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font:600 .74rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--branco);padding:8px 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+@media (hover:hover) and (pointer:fine){.nav a:hover::after{transform:scaleX(1)}}
+.top.solid .nav a{color:var(--ameixa)}
+.menu-btn{display:none;width:44px;height:44px;border:0;background:none;color:var(--branco);cursor:pointer;padding:0;touch-action:manipulation}
+.top.solid .menu-btn{color:var(--roxo)}
+.menu-btn span{display:block;width:24px;height:1.5px;background:currentColor;margin:6px auto;transition:transform .3s var(--ease),opacity .3s}
+@media (max-width:980px){
+  .nav{position:fixed;inset:0;background:var(--roxo);flex-direction:column;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+  .nav a,.top.solid .nav a{color:var(--branco);font:555 2rem/1.1 var(--serif);letter-spacing:0;text-transform:none}
+  .menu-btn{display:block;position:relative;z-index:2}
+  body.menu-open .nav{opacity:1;pointer-events:auto}
+  body.menu-open .menu-btn{color:var(--branco)}
+  body.menu-open .menu-btn span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  body.menu-open .menu-btn span:nth-child(2){opacity:0}
+  body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  body.menu-open .top .logo-b{display:block;position:relative;z-index:2}body.menu-open .top .logo-r{display:none}
+  body.menu-open .top.solid{background:transparent;box-shadow:none}
+}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--roxo);color:var(--branco);min-height:100svh;display:flex;align-items:center;padding:110px 0 72px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,96px);align-items:center}
+.hero-logo{width:min(440px,78%);height:auto;margin-bottom:clamp(28px,4vw,44px)}
+.hero h1{font-size:clamp(2.1rem,3.7vw,3.7rem);font-weight:555;text-transform:uppercase;letter-spacing:.01em;line-height:1.04;max-width:13ch}
+.hero .lead{color:rgba(255,255,255,.88);margin:26px 0 38px;max-width:44ch}
+.arch{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:var(--roxo-fundo)}
+.arch img,.arch video{width:100%;height:100%;object-fit:cover}
+.hero-photo{position:relative;justify-self:end;width:min(100%,500px)}
+.hero-photo .arch{box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.hero-photo::before{content:"";position:absolute;inset:-18px -18px 18px 18px;border:1px solid rgba(255,255,255,.45);border-radius:4px;pointer-events:none}
+.hero-cap{position:absolute;left:-28px;bottom:36px;background:var(--branco);color:var(--ameixa);padding:14px 20px;border-radius:2px;font:555 1.05rem/1.25 var(--serif)}
+.hero-cap small{display:block;font:600 .66rem/1.4 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--roxo)}
+@media (max-width:860px){
+  .hero{padding-top:92px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{order:-1;justify-self:center;width:min(78%,360px);margin-bottom:8px}
+  .hero-photo::before{inset:-12px -12px 12px 12px}
+  .hero-cap{left:-14px;bottom:20px;padding:10px 14px;font-size:.95rem}
+  .hero-logo{width:min(300px,72%)}
+  .hero .btns .btn{flex:1 1 100%}
+}
+/* intro */
+.js .hero-photo .arch{clip-path:inset(100% 0 0 0);transition:clip-path 1.4s var(--ease) .15s}
+.js .hero-txt>*{opacity:0;transform:translateY(14px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .loaded .hero-photo .arch{clip-path:inset(0 0 0 0)}
+.js .loaded .hero-txt>*{opacity:1;transform:none}
+.js .loaded .hero-txt>*:nth-child(2){transition-delay:.35s}.js .loaded .hero-txt>*:nth-child(3){transition-delay:.5s}.js .loaded .hero-txt>*:nth-child(4){transition-delay:.65s}
+
+/* ---------- Carrossel centralizado ---------- */
+.carousel{--sw:clamp(230px,24vw,330px);--ratio:1.25;--step:calc(var(--sw)*.9);position:relative;height:calc(var(--sw)*var(--ratio));touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;overflow-x:clip;overflow-y:visible}
+.carousel.is-video{--sw:clamp(210px,21vw,300px);--ratio:1.7778;--step:calc(var(--sw)*.92)}
+.slide{position:absolute;top:0;left:50%;width:var(--sw);margin-left:calc(var(--sw)/-2);aspect-ratio:1/var(--ratio);
+  transition:transform .7s var(--ease),opacity .7s var(--ease),filter .7s var(--ease);cursor:pointer;-webkit-touch-callout:none}
+.slide.no-anim{transition:none}
+.slide .media{width:100%;height:100%;overflow:hidden;border-radius:4px;background:var(--lilas-borda);position:relative}
+.slide img,.slide video{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.slide.active{cursor:default;z-index:5}
+.slide:not(.active) .media{filter:saturate(.75)}
+.car-ui{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:34px}
+.arrow{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--roxo);background:transparent;color:var(--roxo);cursor:pointer;display:grid;place-items:center;transition:background-color .3s,color .3s;touch-action:manipulation}
+.arrow svg{width:18px;height:18px}
+@media (hover:hover) and (pointer:fine){.arrow:hover{background:var(--roxo);color:var(--branco)}}
+.arrow:active{background:var(--roxo);color:var(--branco)}
+.arrow:focus-visible{outline:2px solid var(--roxo);outline-offset:3px}
+.sec-ameixa .arrow,.sec-roxo .arrow{border-color:var(--branco);color:var(--branco)}
+@media (hover:hover) and (pointer:fine){.sec-ameixa .arrow:hover,.sec-roxo .arrow:hover{background:var(--branco);color:var(--roxo-escuro)}}
+.count{font:555 1.05rem/1 var(--serif);min-width:64px;text-align:center}
+@media (max-width:700px){.sec-head{flex-direction:column;align-items:flex-start;gap:22px}.carousel{--sw:64vw;--step:calc(var(--sw)*.86)}.carousel.is-video{--sw:58vw}}
+
+/* categorias */
+.cat .media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(61,16,71,.62),rgba(61,16,71,0) 46%);opacity:.9}
+.cat .label{position:absolute;left:0;right:0;bottom:22px;z-index:2;text-align:center;color:var(--branco)}
+.cat .label strong{display:block;font:555 clamp(1.7rem,2.4vw,2.2rem)/1 var(--serif)}
+.cat .label span{display:inline-block;margin-top:10px;font:700 .66rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.cat.active .label span{opacity:1;transform:none}
+.cat img{transition:transform 1.2s var(--ease)}
+@media (hover:hover) and (pointer:fine){.cat.active:hover img{transform:scale(1.05)}}
+
+/* ---------- Editorial ---------- */
+.ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,7vw,110px);align-items:stretch}
+.ed-img{position:relative}
+.ed-img .arch{height:100%;min-height:100%}
+.ed-txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(0px,2vw,24px) 0}
+.ed-txt h2{font-size:clamp(1.9rem,3.6vw,3.1rem);font-weight:555}
+.ed-txt p{margin-top:28px;font-size:1.06rem;color:var(--texto-suave);max-width:44ch;line-height:1.8}
+.ed-sign{margin-top:40px;padding-top:28px;border-top:1px solid var(--lilas-borda);display:flex;align-items:center;gap:18px}
+.ed-sign img{height:46px;width:auto}
+.ed-sign span{font:555 1.05rem/1.4 var(--serif);color:var(--roxo)}
+@media (max-width:820px){.ed-grid{grid-template-columns:1fr}.ed-img{max-width:440px;width:100%;margin:0 auto}}
+
+/* ---------- Provador ---------- */
+.prov .sec-head .lead{color:rgba(255,255,255,.8)}
+.prov .slide .media{background:var(--roxo-escuro-2)}
+.prov .slide.active .media{box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
+.prov .sound{position:absolute;right:12px;bottom:12px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(61,16,71,.62);color:#fff;display:none;place-items:center;cursor:pointer}
+.prov .slide.active .sound{display:grid}
+.prov .sound svg{width:18px;height:18px}
+
+/* ---------- Duas formas ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.way{display:grid;grid-template-rows:auto 1fr;background:var(--lilas);border-radius:4px;overflow:hidden}
+.way .ph{aspect-ratio:4/5;overflow:hidden}
+.way .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+@media (hover:hover) and (pointer:fine){.way:hover .ph img{transform:scale(1.04)}}
+.way .bd{padding:clamp(26px,3.5vw,44px);display:flex;flex-direction:column;gap:18px}
+.way h3{font-size:clamp(1.9rem,3vw,2.6rem)}
+.way p{color:var(--texto-suave);max-width:42ch;flex:1}
+.way.dark{background:var(--roxo);color:var(--branco)}
+.way.dark p{color:rgba(255,255,255,.88)}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+
+/* ---------- Elas usam ---------- */
+.elas-title{font-size:clamp(2.8rem,7.4vw,6.2rem);text-transform:uppercase;letter-spacing:.02em;line-height:.9;color:var(--roxo)}
+.elas-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:clamp(12px,1.6vw,20px);margin:clamp(36px,5vw,60px) 0 clamp(56px,7vw,90px)}
+.elas-grid figure{margin:0;overflow:hidden;border-radius:4px;background:var(--lilas-borda)}
+.elas-grid img{width:100%;height:100%;object-fit:cover}
+.elas-big{grid-row:1/3}
+.elas-sm{aspect-ratio:4/5}
+.elas-sm3{grid-column:3;grid-row:1}
+.elas-txt{grid-column:3;grid-row:2;display:flex;flex-direction:column;justify-content:flex-end;padding-left:clamp(4px,1vw,12px);min-width:0}
+.elas-txt p{font:400 clamp(1.15rem,1.5vw,1.45rem)/1.35 var(--serif)}
+.elas-txt small{display:block;margin:14px 0 22px;color:var(--texto-suave);font-size:.92rem;max-width:36ch}
+@media (max-width:900px){
+  .elas-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:auto}
+  .elas-big{grid-column:1/4;grid-row:auto;aspect-ratio:4/5}
+  .elas-sm3{grid-column:auto;grid-row:auto}
+  .elas-txt{grid-column:1/4;grid-row:auto;padding:16px 0 0}
+}
+
+/* ---------- VIP ---------- */
+.vip-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,96px);align-items:center}
+.vip h2{font-size:clamp(2rem,4vw,3.3rem);font-weight:555}
+.vip-txt p{margin:24px 0 28px;max-width:42ch;color:rgba(255,255,255,.88);font-size:1.06rem}
+.vip-list{list-style:none;margin:0 0 36px;padding:0;display:flex;flex-wrap:wrap;row-gap:10px}
+.vip-list li{font:600 .74rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:0 18px;border-left:1px solid rgba(255,255,255,.45)}
+.vip-list li:first-child{padding-left:0;border-left:0}
+.vip-pics{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,20px)}
+.vip-pics figure{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--roxo-fundo)}
+.vip-pics img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.vip-grid{grid-template-columns:1fr}}
+
+/* ---------- CEO ---------- */
+.ceo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,7vw,110px);align-items:center}
+.ceo-photo{position:relative;width:min(100%,460px)}
+.ceo-photo::before{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1px solid var(--roxo);border-radius:4px;opacity:.5;pointer-events:none}
+.ceo-photo .arch{position:relative}
+.ceo-txt .role{font:700 .72rem/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--roxo)}
+.ceo-txt h2{font-size:clamp(2.6rem,6vw,5rem);margin-top:14px;color:var(--roxo)}
+.ceo-txt p{margin-top:26px;font-size:1.06rem;line-height:1.8;color:var(--texto-suave);max-width:44ch}
+.ceo-txt .btns{margin-top:36px}
+@media (max-width:820px){.ceo-grid{grid-template-columns:1fr}.ceo-photo{margin:0 auto;width:min(86%,400px)}}
+
+/* ---------- Lojas ---------- */
+.lojas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.loja{display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;background:var(--lilas);border-radius:4px;overflow:hidden}
+.loja .arch{border-radius:4px;margin:clamp(14px,1.6vw,20px) clamp(14px,1.6vw,20px) 0;aspect-ratio:4/5;min-height:0}
+.loja .bd{padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column;gap:14px}
+.loja h3{font-size:clamp(1.8rem,2.6vw,2.4rem)}
+.loja h3 em{display:block;font:700 .66rem/1.4 var(--sans);font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--roxo);margin-bottom:6px}
+.loja dl{margin:0;display:grid;gap:12px;font-size:.93rem;flex:1}
+.loja dt{font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave)}
+.loja dd{margin:2px 0 0}
+.loja .btns{flex-direction:row;gap:10px}.loja .btns .btn{flex:1 1 180px}
+.loja .btn{min-height:46px;padding:0 18px;font-size:.7rem}
+@media (max-width:760px){.lojas{grid-template-columns:1fr}}
+@media (max-width:560px){.loja{grid-template-columns:1fr}.loja .arch{margin:16px 16px 0;aspect-ratio:4/5;min-height:0}}
+
+/* ---------- Instagram ---------- */
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.2vw,14px);margin-bottom:44px}
+.ig-grid a{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:4px;position:relative}
+.ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.ig-grid a::after{content:"";position:absolute;inset:0;background:var(--roxo);opacity:0;transition:opacity .4s}
+@media (hover:hover) and (pointer:fine){.ig-grid a:hover img{transform:scale(1.05)}.ig-grid a:hover::after{opacity:.18}}
+.ig-foot{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+@media (max-width:820px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- CTA final ---------- */
+.final{text-align:center;overflow:hidden}
+.final img.lg{width:min(260px,60%);height:auto;margin:0 auto 40px}
+.final h2{font-size:clamp(2.1rem,4.8vw,4rem);font-weight:555}
+.final p{max-width:46ch;margin:24px auto 40px;color:rgba(255,255,255,.88);font-size:1.06rem}
+
+/* ---------- Rodapé ---------- */
+footer{background:var(--roxo-escuro-2);color:rgba(255,255,255,.82);padding:clamp(56px,7vw,88px) 0 32px;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.f-grid img{height:46px;width:auto;margin-bottom:18px}
+.f-grid h4{margin:0 0 14px;font:700 .7rem/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.f-grid a{text-decoration:none;display:inline-block;padding:3px 0}
+@media (hover:hover) and (pointer:fine){.f-grid a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}}
+.f-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.f-bot{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:rgba(255,255,255,.6)}
+@media (max-width:900px){.f-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.f-grid{grid-template-columns:1fr}}
+
+/* ---------- WhatsApp flutuante + escolha de unidade ---------- */
+.wa-float{position:fixed;right:calc(18px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;
+  background:var(--roxo);color:#fff;border:1.5px solid var(--roxo);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px rgba(61,16,71,.28);transition:background-color .3s,color .3s;touch-action:manipulation}
+.wa-float svg{width:28px;height:28px}
+@media (hover:hover) and (pointer:fine){.wa-float:hover{background:#fff;color:var(--roxo)}}
+.wa-float:active{background:#fff;color:var(--roxo)}
+dialog.pick{border:0;padding:0;border-radius:6px;width:min(440px,calc(100vw - 32px));background:var(--branco);color:var(--texto)}
+dialog.pick::backdrop{background:rgba(61,16,71,.6);backdrop-filter:blur(3px)}
+.pick-in{padding:34px 28px 28px;text-align:center}
+.pick h3{font-size:2rem}
+.pick p{color:var(--texto-suave);margin:10px 0 24px;font-size:.95rem}
+.pick .btns{flex-direction:column}
+.pick .x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:none;font-size:26px;line-height:1;color:var(--texto-suave);cursor:pointer}
+.pick-in{position:relative}
+
+/* transições ao rolar */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv:is(figure,.ed-img,.way,.loja,.ig-grid) img{transform:scale(1.07);transition:transform 1.8s var(--ease);transition-delay:var(--d,0s)}
+.js .rv.in:is(figure,.ed-img,.way,.loja,.ig-grid) img{transform:none}
+/* intro do logo */
+.intro{position:fixed;inset:0;z-index:200;background:var(--roxo);display:grid;place-items:center;transition:transform 1.1s cubic-bezier(.76,0,.24,1),visibility 0s 1.1s}
+.intro-in{display:grid;justify-items:center;gap:26px}
+.intro img{width:min(430px,68vw);height:auto;opacity:0;clip-path:inset(0 100% 0 0);animation:logoIn 1.5s cubic-bezier(.65,0,.35,1) .25s forwards}
+.intro i{display:block;height:1px;width:min(220px,40vw);background:rgba(255,255,255,.7);transform:scaleX(0);animation:lineIn 1.1s var(--ease) 1.2s forwards}
+@keyframes logoIn{0%{opacity:0;clip-path:inset(0 100% 0 0);transform:scale(1.05)}35%{opacity:1}100%{opacity:1;clip-path:inset(0 0 0 0);transform:none}}
+@keyframes lineIn{to{transform:scaleX(1)}}
+.intro.out{transform:translateY(-100%);visibility:hidden}
+body.intro-on{overflow:hidden}
+/* reveal */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .js .rv,.js .hero-txt>*{opacity:1;transform:none}
+  .js .rv img{transform:none!important}
+  .intro{display:none}
+  .js .hero-photo .arch{clip-path:none}
+}
+</style>
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true"><div class="intro-in"><img src="img/logo-branco.png" alt=""><i></i></div></div>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a href="#inicio" aria-label="Lumary, voltar ao início">
+      <img class="logo logo-b" src="img/logo-branco.png" alt="Lumary Moda Feminina" width="790" height="301">
+      <img class="logo logo-r" src="img/logo-roxo.png" alt="Lumary Moda Feminina" width="790" height="301">
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#estilos">Estilos</a>
+      <a href="#lumary">A Lumary</a>
+      <a href="#provador">Provador</a>
+      <a href="#elas-usam">Elas usam</a>
+      <a href="#lojas">Lojas</a>
+      <a href="#vip">Grupo VIP</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- 01 HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <img class="hero-logo" src="img/logo-branco.png" alt="Lumary Moda Feminina" width="790" height="301">
+      <h1>Sua personalidade merece ser vestida.</h1>
+      <p class="lead">Descubra uma moda que acompanha seu estilo, valoriza sua essência e transforma cada produção em uma expressão de quem você é.</p>
+      <div class="btns">
+        <a class="btn btn-branco" href="#lumary">Conheça a Lumary</a>
+        <a class="btn btn-linha-branca" href="#estilos">Explore nossas novidades</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="arch"><video src="vid/hero.mp4" poster="vid/hero.jpg" autoplay muted loop playsinline preload="auto" aria-label="Cliente experimentando vestido floral no provador da Lumary"></video></div>
+      <p class="hero-cap"><small>João Pessoa · PB</small>Duas lojas e envio para todo o Brasil</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 EXPLORE SEU ESTILO -->
+<section class="sec" id="estilos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2 class="h2">Explore seu estilo</h2>
+        <p class="lead">Escolha uma categoria e fale com a gente para ver as peças disponíveis na loja.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel rv" data-carousel data-autoplay="4200" aria-roledescription="carrossel" aria-label="Categorias">
+    <article class="slide cat" data-wa="Vestidos"><div class="media"><img src="img/cat-vestidos.webp" alt="Vestido longo amarelo de costas abertas" loading="lazy"></div><div class="label"><strong>Vestidos</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Conjuntos"><div class="media"><img src="img/cat-conjuntos.webp" alt="Blusa branca com laços e saia azul clara" loading="lazy"></div><div class="label"><strong>Conjuntos</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Blusas"><div class="media"><img src="img/cat-blusas.webp" alt="Corset de renda azul na vitrine" loading="lazy"></div><div class="label"><strong>Blusas</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Bodys"><div class="media"><img src="img/cat-bodys.webp" alt="Body rosa gola polo com calça jeans" loading="lazy"></div><div class="label"><strong>Bodys</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Calças"><div class="media"><img src="img/cat-calcas.webp" alt="Calça pantalona bege no provador" loading="lazy"></div><div class="label"><strong>Calças</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Shorts"><div class="media"><img src="img/cat-shorts.webp" alt="Short off-white com blusa rosa" loading="lazy"></div><div class="label"><strong>Shorts</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Saias"><div class="media"><img src="img/cat-saias.webp" alt="Saia branca de babados com body rosa" loading="lazy"></div><div class="label"><strong>Saias</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Macaquinhos"><div class="media"><img src="img/cat-macaquinhos.webp" alt="Peça floral rosa no manequim" loading="lazy"></div><div class="label"><strong>Macaquinhos</strong><span>Ver peças</span></div></article>
+    <article class="slide cat" data-wa="Looks"><div class="media"><img src="img/cat-looks.webp" alt="Quatro looks em tons de azul e branco na vitrine" loading="lazy"></div><div class="label"><strong>Looks</strong><span>Ver peças</span></div></article>
+  </div>
+  <div class="car-ui" data-for="0">
+    <button class="arrow prev" aria-label="Categoria anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="count" aria-live="polite"></span>
+    <button class="arrow next" aria-label="Próxima categoria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- 03 EDITORIAL -->
+<section class="sec sec-lilas" id="lumary">
+  <div class="wrap ed-grid">
+    <div class="ed-img rv"><div class="arch"><img src="img/ed-navy.webp" alt="Cliente na loja Lumary com vestido longo azul marinho de costas abertas" loading="lazy" width="960" height="1200"></div></div>
+    <div class="ed-txt rv">
+      <h2>Não é apenas sobre vestir. É sobre se sentir incrível.</h2>
+      <p>Na Lumary, acreditamos que cada mulher tem seu próprio jeito de expressar estilo. Por isso, reunimos peças que acompanham diferentes momentos, personalidades e ocasiões. Do casual ao sofisticado, aqui você encontra possibilidades para vestir quem você é.</p>
+      <div class="ed-sign"><img src="img/logo-roxo-stack.png" alt="" width="773" height="664"><span>Moda feminina em Mangabeira e no Cristo, João Pessoa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVADOR -->
+<section class="sec sec-ameixa prov" id="provador">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <h2 class="h2">Direto do provador</h2>
+        <p class="lead">Veja as peças em movimento, do jeito que ficam no corpo. Gostou de algum look? Chame a gente e peça o seu.</p>
+      </div>
+      <button class="btn btn-linha-branca" data-wa="looks do provador">Quero um desses looks</button>
+    </div>
+  </div>
+  <div class="carousel is-video rv" data-carousel aria-roledescription="carrossel" aria-label="Vídeos do provador">
+    <article class="slide"><div class="media"><video src="vid/provador-2.mp4" poster="vid/provador-2.jpg" muted loop playsinline preload="metadata"></video></div></article>
+    <article class="slide"><div class="media"><video src="vid/provador-4.mp4" poster="vid/provador-4.jpg" muted loop playsinline preload="metadata"></video></div></article>
+    <article class="slide"><div class="media"><video src="vid/provador-5.mp4" poster="vid/provador-5.jpg" muted loop playsinline preload="metadata"></video></div></article>
+    <article class="slide"><div class="media"><video src="vid/provador-7.mp4" poster="vid/provador-7.jpg" muted loop playsinline preload="metadata"></video></div></article>
+    <article class="slide"><div class="media"><video src="vid/provador-8.mp4" poster="vid/provador-8.jpg" muted loop playsinline preload="metadata"></video></div></article>
+    <article class="slide"><div class="media"><video src="vid/provador-9.mp4" poster="vid/provador-9.jpg" muted loop playsinline preload="metadata"></video></div></article>
+  </div>
+  <div class="car-ui" data-for="1">
+    <button class="arrow prev" aria-label="Vídeo anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="count" aria-live="polite"></span>
+    <button class="arrow next" aria-label="Próximo vídeo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- 04 DUAS FORMAS -->
+<section class="sec" id="comprar">
+  <div class="wrap">
+    <div class="sec-head rv"><div><h2 class="h2">Uma experiência, duas formas de comprar</h2></div></div>
+    <div class="two">
+      <article class="way rv">
+        <div class="ph"><img src="img/buy-loja.webp" alt="Interior da loja Lumary com looks em azul e branco nos manequins" loading="lazy"></div>
+        <div class="bd">
+          <h3>Compra presencial</h3>
+          <p>Venha conhecer nossas lojas, descobrir suas peças favoritas e viver a experiência Lumary de perto.</p>
+          <div class="btns"><a class="btn btn-roxo" href="#lojas">Ver nossas lojas</a></div>
+        </div>
+      </article>
+      <article class="way dark rv">
+        <div class="ph"><img src="img/buy-online.webp" alt="Cliente experimentando vestido branco no provador" loading="lazy"></div>
+        <div class="bd">
+          <h3>Compra online</h3>
+          <p>Escolha suas peças com praticidade e receba onde estiver. Atendemos por WhatsApp, realizamos entregas na Grande João Pessoa e enviamos para todo o Brasil.</p>
+          <div class="btns"><button class="btn btn-branco" data-wa="compra online">Comprar pelo WhatsApp</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ELAS USAM -->
+<section class="sec sec-lilas" id="elas-usam">
+  <div class="wrap">
+    <h2 class="elas-title rv">Elas usam</h2>
+    <div class="elas-grid">
+      <figure class="elas-big rv"><img src="img/cl-p9.webp" alt="Cliente com vestido marrom drapeado" loading="lazy"></figure>
+      <figure class="elas-sm rv"><img src="img/cl-p7.webp" alt="Cliente com cropped azul e calça cargo branca" loading="lazy"></figure>
+      <figure class="elas-sm rv"><img src="img/cl-p4.webp" alt="Cliente com body vinho e short preto" loading="lazy"></figure>
+      <figure class="elas-sm elas-sm3 rv"><img src="img/cl-p1.webp" alt="Cliente com conjunto jeans escuro" loading="lazy"></figure>
+      <div class="elas-txt rv">
+        <p>Mulheres reais, com estilos diferentes, vestindo a Lumary do jeito delas.</p>
+        <small>Do look do dia à produção da festa. Marque @lojalumary e apareça por aqui.</small>
+        <div class="btns"><button class="btn btn-roxo" data-wa="looks que vi em Elas Usam">Quero o meu look</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel rv" data-carousel data-autoplay="3200" aria-roledescription="carrossel" aria-label="Fotos de clientes">
+    <article class="slide"><div class="media"><img src="img/cl-c24.webp" alt="Cliente com vestido preto ombro único" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-p8.webp" alt="Cliente de óculos com top verde" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c13.webp" alt="Cliente com vestido longo azul marinho" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-p5.webp" alt="Cliente com vestido preto de botões" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c20.webp" alt="Cliente com conjunto marrom" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-p3.webp" alt="Cliente com regata branca e azul" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c9.webp" alt="Cliente com conjunto floral rosa" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c16.webp" alt="Cliente com vestido verde" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-p6.webp" alt="Cliente com saia preta de babados" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c11.webp" alt="Cliente com vestido branco e botas" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c18.webp" alt="Cliente com top amarelo" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c23.webp" alt="Cliente com vestido amarelo curto" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c7.webp" alt="Cliente com top preto de vinil" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c15.webp" alt="Cliente com vestido rosa" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-p2.webp" alt="Cliente com camisa estampada verde e amarela" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c4.webp" alt="Cliente com top estampado e saia branca" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c17.webp" alt="Cliente com cropped preto e saia branca" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c3.webp" alt="Cliente com blusa preta e short" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c6.webp" alt="Cliente com saia verde à noite" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c5.webp" alt="Cliente com top acetinado verde" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c12.webp" alt="Cliente com cropped amarelo e jeans" loading="lazy"></div></article>
+    <article class="slide"><div class="media"><img src="img/cl-c8.webp" alt="Cliente com regata azul" loading="lazy"></div></article>
+  </div>
+  <div class="car-ui" data-for="2">
+    <button class="arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="count" aria-live="polite"></span>
+    <button class="arrow next" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- 05 GRUPO VIP -->
+<section class="sec sec-roxo vip" id="vip">
+  <div class="wrap vip-grid">
+    <div class="vip-txt rv">
+      <h2>Seu próximo look pode estar no nosso grupo VIP.</h2>
+      <p>Entre para o universo Lumary e fique mais perto das novidades, lançamentos e oportunidades da nossa loja.</p>
+      <ul class="vip-list"><li>Novidades</li><li>Lançamentos</li><li>Oportunidades</li></ul>
+      <a class="btn btn-branco" href="https://chat.whatsapp.com/LK5EDMaNBRz3s9phQQlN4N" target="_blank" rel="noopener">Quero fazer parte do grupo VIP</a>
+    </div>
+    <div class="vip-pics">
+      <figure class="rv"><img src="img/vip-1.webp" alt="Vestido longo azul marinho no provador da Lumary" loading="lazy"></figure>
+      <figure class="rv"><img src="img/vip-2.webp" alt="Vestido curto vermelho frente única no provador da Lumary" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CEO -->
+<section class="sec sec-lilas" id="ceo">
+  <div class="wrap ceo-grid">
+    <div class="ceo-photo rv"><div class="arch"><img src="img/ceo.webp" alt="Maria Eduarda, CEO da Lumary, sentada na loja de vestido branco longo" loading="lazy" width="960" height="1200"></div></div>
+    <div class="ceo-txt rv">
+      <span class="role">CEO da Lumary</span>
+      <h2>Maria Eduarda</h2>
+      <p>À frente da Lumary, Maria Eduarda cuida de cada detalhe: das peças que chegam às araras ao atendimento nas duas lojas e no WhatsApp. A ideia é simples: toda mulher merece sair da Lumary se sentindo ela mesma, só que ainda mais bonita.</p>
+      <div class="btns"><button class="btn btn-roxo" data-wa="atendimento com a equipe da Maria Eduarda">Falar com a Lumary</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 LOJAS -->
+<section class="sec" id="lojas">
+  <div class="wrap">
+    <div class="sec-head rv"><div><h2 class="h2">Visite nossas lojas</h2><p class="lead">Duas unidades em João Pessoa, com o mesmo cuidado no atendimento.</p></div></div>
+    <div class="lojas">
+      <article class="loja rv">
+        <div class="arch"><img src="img/loja-mangabeira.webp" alt="Fachada da Lumary Mangabeira com arco roxo" loading="lazy"></div>
+        <div class="bd">
+          <h3><em>Unidade</em>Mangabeira</h3>
+          <dl>
+            <div><dt>Endereço</dt><dd>Rua Josefa Taveira, 385, Mangabeira, João Pessoa (PB), 58055-000</dd></div>
+            <div><dt>Horário</dt><dd>Segunda a sábado, das 09h às 18h</dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn btn-roxo" href="https://www.google.com/maps/place/R.+Josefa+Taveira,+385+-+Mangabeira,+Jo%C3%A3o+Pessoa+-+PB,+58055-000/" target="_blank" rel="noopener">Como chegar</a>
+            <a class="btn btn-linha" href="https://api.whatsapp.com/send/?phone=5583994218304&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumary." target="_blank" rel="noopener">Falar com a loja</a>
+          </div>
+        </div>
+      </article>
+      <article class="loja rv">
+        <div class="arch"><img src="img/loja-cristo.webp" alt="Fachada da Lumary Cristo com vitrine de vestidos" loading="lazy"></div>
+        <div class="bd">
+          <h3><em>Unidade</em>Cristo</h3>
+          <dl>
+            <div><dt>Endereço</dt><dd>Avenida da Fraternidade, 400, Cristo, João Pessoa (PB)</dd></div>
+            <div><dt>Horário</dt><dd>Segunda a sábado, das 09h às 18h<br>Almoço das 12h às 13h · Domingo fechado</dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn btn-roxo" href="https://www.google.com/maps/place/Lumary+MODA+FEMININA/@-7.154013,-34.8835872,17z/" target="_blank" rel="noopener">Como chegar</a>
+            <a class="btn btn-linha" href="https://api.whatsapp.com/send/?phone=5583993776546&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Lumary." target="_blank" rel="noopener">Falar com a loja</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 07 INSTAGRAM -->
+<section class="sec sec-lilas" id="instagram">
+  <div class="wrap">
+    <div class="sec-head rv"><div><h2 class="h2">O universo Lumary também acontece por aqui.</h2><p class="lead">Acompanhe nossas novidades, inspirações e produções.</p></div></div>
+    <div class="ig-grid rv">
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-1.webp" alt="Bolsas com fecho dourado" loading="lazy"></a>
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-6.webp" alt="Look preto com acessórios prata" loading="lazy"></a>
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-4.webp" alt="Vitrine com looks rosa" loading="lazy"></a>
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-3.webp" alt="Calça marrom com blusa branca" loading="lazy"></a>
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-2.webp" alt="Bolsas metálicas prata e dourada" loading="lazy"></a>
+      <a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener" aria-label="Instagram da Lumary"><img src="img/ig-5.webp" alt="Vestido azul tomara que caia e corset de renda" loading="lazy"></a>
+    </div>
+    <div class="ig-foot rv">
+      <a class="btn btn-roxo" href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener">Seguir @lojalumary</a>
+      <a class="btn btn-linha" href="https://www.tiktok.com/@lojalumary" target="_blank" rel="noopener">Ver no TikTok</a>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CTA FINAL -->
+<section class="sec sec-roxo final">
+  <div class="wrap rv">
+    <img class="lg" src="img/logo-branco-stack.png" alt="Lumary Moda Feminina" width="773" height="664" loading="lazy">
+    <h2>Seu estilo. Sua essência. Seu momento.</h2>
+    <p>A Lumary está esperando por você. Descubra nossas coleções e encontre seu próximo look favorito.</p>
+    <button class="btn btn-branco" data-wa="meu próximo look">Escolher meu próximo look</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img src="img/logo-branco.png" alt="Lumary Moda Feminina" width="790" height="301" loading="lazy">
+        <p>Moda feminina em João Pessoa, com atendimento pelo WhatsApp e envio para todo o Brasil.</p>
+      </div>
+      <div>
+        <h4>Unidade Mangabeira</h4>
+        <p>Rua Josefa Taveira, 385, Mangabeira, João Pessoa (PB), 58055-000</p>
+        <ul><li><a href="https://api.whatsapp.com/send/?phone=5583994218304" target="_blank" rel="noopener">WhatsApp (83) 99421-8304</a></li></ul>
+      </div>
+      <div>
+        <h4>Unidade Cristo</h4>
+        <p>Avenida da Fraternidade, 400, Cristo, João Pessoa (PB)</p>
+        <ul><li><a href="https://api.whatsapp.com/send/?phone=5583993776546" target="_blank" rel="noopener">WhatsApp (83) 99377-6546</a></li></ul>
+      </div>
+      <div>
+        <h4>Acompanhe</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/lojalumary/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@lojalumary" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://chat.whatsapp.com/LK5EDMaNBRz3s9phQQlN4N" target="_blank" rel="noopener">Grupo VIP</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bot"><span>© 2026 Lumary Moda Feminina. Todos os direitos reservados.</span><span>João Pessoa, Paraíba</span></div>
+  </div>
+</footer>
+
+<button class="wa-float" data-wa="atendimento" aria-label="Falar com a Lumary no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A12.96 12.96 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3zm0 23.7c-1.95 0-3.86-.52-5.53-1.52l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.66 10.66 0 0 1 5.33 16c0-5.9 4.8-10.7 10.71-10.7 5.9 0 10.66 4.8 10.66 10.7 0 5.9-4.76 10.7-10.66 10.7zm5.86-8c-.32-.16-1.9-.94-2.2-1.04-.29-.11-.5-.16-.72.16-.21.32-.83 1.04-1.01 1.25-.19.21-.37.24-.7.08-.32-.16-1.35-.5-2.58-1.6-.95-.85-1.6-1.9-1.78-2.22-.19-.32-.02-.5.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+</button>
+
+<dialog class="pick" id="pick" aria-labelledby="pickTitle">
+  <div class="pick-in">
+    <button class="x" data-close aria-label="Fechar">×</button>
+    <h3 id="pickTitle">Fale com a Lumary</h3>
+    <p>Escolha a unidade que vai te atender pelo WhatsApp.</p>
+    <div class="btns">
+      <a class="btn btn-roxo" id="pickMang" target="_blank" rel="noopener">Unidade Mangabeira</a>
+      <a class="btn btn-linha" id="pickCris" target="_blank" rel="noopener">Unidade Cristo</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+document.documentElement.classList.add('js');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const intro=document.getElementById('intro');
+function startHero(){document.body.classList.add('loaded')}
+if(reduce){intro.remove();startHero()}
+else{
+  document.body.classList.add('intro-on');
+  setTimeout(()=>{intro.classList.add('out');document.body.classList.remove('intro-on');setTimeout(startHero,350)},2700);
+  setTimeout(()=>intro.remove(),4200);
+}
+
+/* header */
+const top_=document.getElementById('top');
+const onScroll=()=>top_.classList.toggle('solid',scrollY>innerHeight*.75);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',()=>{const o=document.body.classList.toggle('menu-open');menuBtn.setAttribute('aria-expanded',o);menuBtn.setAttribute('aria-label',o?'Fechar menu':'Abrir menu')});
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('menu-open');menuBtn.setAttribute('aria-expanded','false')}));
+
+/* WhatsApp: escolha da unidade */
+const NUM={m:'5583994218304',c:'5583993776546'};
+const pick=document.getElementById('pick');
+const waUrl=(n,t)=>`https://api.whatsapp.com/send/?phone=${n}&text=${encodeURIComponent(t)}`;
+function openPick(topic){
+  const t=`Olá! Vim pelo site da Lumary e quero saber mais sobre ${topic}.`;
+  document.getElementById('pickMang').href=waUrl(NUM.m,t);
+  document.getElementById('pickCris').href=waUrl(NUM.c,t);
+  if(pick.showModal)pick.showModal();else window.open(waUrl(NUM.m,t),'_blank');
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-wa]');if(b){openPick(b.dataset.wa);}
+});
+pick.addEventListener('click',e=>{if(e.target===pick||e.target.closest('[data-close]')||e.target.closest('a'))pick.close()});
+
+/* reveal */
+const rvs=[...document.querySelectorAll('.rv')];
+rvs.forEach(el=>{const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rv'));const i=sib.indexOf(el);el.style.setProperty('--d',Math.min(i*0.14,0.6)+'s')});
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{rootMargin:'0px 0px -6% 0px',threshold:0.08});
+  rvs.forEach(el=>io.observe(el));
+}else rvs.forEach(el=>el.classList.add('in'));
+
+/* carrossel com item ativo no centro */
+document.querySelectorAll('[data-carousel]').forEach((root,ci)=>{
+  const slides=[...root.querySelectorAll('.slide')],n=slides.length;
+  const ui=document.querySelector(`.car-ui[data-for="${ci}"]`);
+  const count=ui&&ui.querySelector('.count');
+  let active=0,timer=null,prevPos=slides.map(()=>0);
+  const isMobile=()=>innerWidth<=700;
+  function render(){
+    const span=isMobile()?1:3;
+    slides.forEach((s,i)=>{
+      let d=i-active; if(d>n/2)d-=n; if(d<-n/2)d+=n;
+      const jump=Math.abs(d-prevPos[i])>1; prevPos[i]=d;
+      s.classList.toggle('no-anim',jump);
+      const sc=d===0?1:.8, vis=Math.abs(d)<=span;
+      s.style.transform=`translateX(calc(var(--step) * ${d})) scale(${sc})`;
+      s.style.opacity=vis?(d===0?1:Math.abs(d)===1?.6:.3):0;
+      s.style.zIndex=10-Math.abs(d);
+      s.classList.toggle('active',d===0);
+      s.setAttribute('aria-hidden',d!==0);
+      const v=s.querySelector('video');
+      if(v){ if(d===0){v.play().catch(()=>{})} else {v.pause(); v.muted=true} }
+    });
+    if(count)count.textContent=`${String(active+1).padStart(2,'0')} / ${String(n).padStart(2,'0')}`;
+  }
+  const go=i=>{active=(i+n)%n;render()};
+  ui&&ui.querySelector('.prev').addEventListener('click',()=>{go(active-1);restart()});
+  ui&&ui.querySelector('.next').addEventListener('click',()=>{go(active+1);restart()});
+  let swiped=false;
+  slides.forEach((s,i)=>s.addEventListener('click',()=>{
+    if(swiped){swiped=false;return}
+    if(i!==active){go(i);restart();return}
+    if(s.dataset.wa)openPick(s.dataset.wa);
+    const v=s.querySelector('video'); if(v){v.muted=!v.muted}
+  }));
+  /* swipe */
+  let x0=null;
+  root.addEventListener('pointerdown',e=>{x0=e.clientX},{passive:true});
+  root.addEventListener('pointerup',e=>{if(x0===null)return;const dx=e.clientX-x0;x0=null;if(Math.abs(dx)>40){swiped=true;setTimeout(()=>swiped=false,350);go(active+(dx<0?1:-1));restart()}});
+  /* autoplay */
+  const ms=+root.dataset.autoplay||0;
+  function restart(){clearInterval(timer);if(ms&&!reduce)timer=setInterval(()=>go(active+1),ms)}
+  root.addEventListener('mouseenter',()=>clearInterval(timer));root.addEventListener('mouseleave',restart);
+  /* vídeos: avançar ao terminar não é necessário (loop); começar no meio */
+  active=Math.floor(n/2)-(n%2?0:1); if(root.classList.contains('is-video'))active=0;
+  slides.forEach((s,i)=>{let d=i-active;if(d>n/2)d-=n;if(d<-n/2)d+=n;prevPos[i]=d});
+  render();restart();
+  addEventListener('resize',render);
+});
+</script>
+
+</body>
+</html>
